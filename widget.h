@@ -2,12 +2,10 @@
 #define WIDGET_H
 
 #include <QWidget>
-
-QT_BEGIN_NAMESPACE
-namespace Ui {
-class Widget;
-}
-QT_END_NAMESPACE
+#include <QLineEdit>
+#include <QPushButton>
+#include <QGridLayout>
+#include <QString>
 
 class Widget : public QWidget
 {
@@ -17,7 +15,22 @@ public:
     Widget(QWidget *parent = nullptr);
     ~Widget();
 
+private slots:
+    void digitClicked();
+    void operatorClicked();
+    void equalClicked();
+    void clearClicked();
+    void backspaceClicked();
+    void decimalClicked();
+
 private:
-    Ui::Widget *ui;
+    void createUI();
+    QPushButton* createButton(const QString &text, const char* slot);
+    
+    QLineEdit *display;
+    QString currentNumber;
+    QString operand1;
+    QString currentOperator;
+    bool waitingForOperand;
 };
 #endif // WIDGET_H
