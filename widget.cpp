@@ -27,19 +27,19 @@ void Widget::createUI()
     mainLayout->addWidget(display, 0, 0, 1, 4);
     
     // Number buttons - arranged in a non-standard layout as requested
-    mainLayout->addWidget(createButton("7", SLOT(digitClicked())), 1, 0);
-    mainLayout->addWidget(createButton("4", SLOT(digitClicked())), 1, 1);
-    mainLayout->addWidget(createButton("1", SLOT(digitClicked())), 1, 2);
+    mainLayout->addWidget(createButton("1", SLOT(digitClicked())), 1, 0);
+    mainLayout->addWidget(createButton("2", SLOT(digitClicked())), 1, 1);
+    mainLayout->addWidget(createButton("3", SLOT(digitClicked())), 1, 2);
     mainLayout->addWidget(createButton("0", SLOT(digitClicked())), 1, 3);
     
-    mainLayout->addWidget(createButton("8", SLOT(digitClicked())), 2, 0);
+    mainLayout->addWidget(createButton("4", SLOT(digitClicked())), 2, 0);
     mainLayout->addWidget(createButton("5", SLOT(digitClicked())), 2, 1);
-    mainLayout->addWidget(createButton("2", SLOT(digitClicked())), 2, 2);
+    mainLayout->addWidget(createButton("6", SLOT(digitClicked())), 2, 2);
     mainLayout->addWidget(createButton(".", SLOT(decimalClicked())), 2, 3);
     
-    mainLayout->addWidget(createButton("9", SLOT(digitClicked())), 3, 0);
-    mainLayout->addWidget(createButton("6", SLOT(digitClicked())), 3, 1);
-    mainLayout->addWidget(createButton("3", SLOT(digitClicked())), 3, 2);
+    mainLayout->addWidget(createButton("7", SLOT(digitClicked())), 3, 0);
+    mainLayout->addWidget(createButton("8", SLOT(digitClicked())), 3, 1);
+    mainLayout->addWidget(createButton("9", SLOT(digitClicked())), 3, 2);
     mainLayout->addWidget(createButton("<-", SLOT(backspaceClicked())), 3, 3);
     
     // Operation buttons
